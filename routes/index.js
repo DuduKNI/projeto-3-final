@@ -7,9 +7,6 @@ const { authenticate } = require('../Middlewares')
 
 const routes = Router()
 
-// routes.get('/', (req, res) => {
-//   res.render('../index.html')
-// })
 routes.get('/', (req, res) => {
   res.send('Olá mundo')
 })

@@ -6,8 +6,6 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const routes = require('./routes')
 const PORT = process.env.PORT || 5000
-const ejs = require('ejs')
-const path = require('path')
 require('dotenv/config')
 
 const postsRoute = require('./routes/posts')
@@ -28,9 +26,6 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, () =>
   console.log('Conectado ao banco')
 )
 
-// app.engine('html', require('ejs').renderFile)
-// app.set('view engine', 'html')
-// app.use(express.static(__dirname));
 app.use(cors())
 app.use(express.json())
 app.use(routes)
