@@ -8,7 +8,7 @@ const { authenticate } = require('../Middlewares')
 const routes = Router()
 
 routes.get('/', (req, res) => {
-  res.send('Olá mundo')
+  res.render('../index.html')
 })
 
 routes.post('/users', UserController.createUser) //Criar usuário
