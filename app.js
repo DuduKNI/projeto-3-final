@@ -5,6 +5,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const routes = require('./routes')
+const PORT = process.env.PORT || 5000
 require('dotenv/config')
 
 const postsRoute = require('./routes/posts')
@@ -29,6 +30,7 @@ app.use(cors())
 app.use(express.json())
 app.use(routes)
 
-app.listen(process.env.PORT || 5000, () => console.log(`Listening on ${ process.env.PORT || 5000 }`))
+// app.listen(process.env.PORT || 5000, () => console.log(`Listening on ${ process.env.PORT || 5000 }`))
+app.listen(PORT)
 
 module.exports = mongoose
